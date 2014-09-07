@@ -18,15 +18,15 @@ FUNC_Z = 'v / 2 * sin(u/2)' #v,u
 SAMPLE = 500  # number of sample
 
 def func_x(v, u):
-    answer = [((1. + value_v / 2. * cos(u/2.)) * cos(u)) for value_v in v]
+    answer = [((1. + v / 2. * cos(value_u/2.)) * cos(value_u)) for value_u in u]
     return array(answer)
     
 def func_y(v, u):
-    answer = [((1. + value_v / 2. * cos(u/2.)) * sin(u)) for value_v in v]
+    answer = [((1. + v / 2. * cos(value_u/2.)) * sin(value_u)) for value_u in u]
     return array(answer)
 
 def func_z(v, u):
-    answer = [(value_v / 2. * sin(u/2.)) for value_v in v]
+    answer = [(v / 2. * sin(value_u/2.)) for value_u in u]
     return array(answer)
 
 
